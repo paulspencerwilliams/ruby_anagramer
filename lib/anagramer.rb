@@ -4,7 +4,7 @@ class Anagramer
   def lookup(input, word_repository = WordRepository.new  ) 
     matches = []
     word_repository.list.each do |possible|
-      if (possible.length == input.length)
+      if (possible.length == input.length) 
         if (possible.downcase != input.downcase)
           if (possible.downcase.split(//).sort == input.downcase.split(//).sort)
             matches << possible
@@ -12,5 +12,6 @@ class Anagramer
         end
       end
     end 
+    matches
   end
 end

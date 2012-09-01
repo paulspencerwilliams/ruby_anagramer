@@ -5,12 +5,11 @@ Scenario Outline: returns all anagrams
   Then I should see <expected> 
 
   Examples: 
-    | input | expected |
+    | input   | expected |
     | kinship | pinkish |
-    | enlist  | inlets,listen,silent |
-    | boaster | boaters borates |
+    | enlist  | listen,silent,tinsel |
+    | boaster | Barotse,reboast,sorbate |
     | fresher | refresh |
-    | sink   | skin |
+    | sink    | inks,skin |
     | knits   | stink |
     | rots    | sort |
-    | andrew    | test |

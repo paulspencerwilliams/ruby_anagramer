@@ -10,5 +10,5 @@ When /^I ask for anagrams$/ do
 end
 
 Then /^I should see (.*?)$/ do |expected|
-  @output.to_s.should eq(expected) 
+  @output.join(',').should eq(expected) 
 end

@@ -24,7 +24,7 @@ describe Anagramer do
   end
 
   context "when asked to lookup up a word without an anagram" do
-    it "should return kinship" do
+    it "should return nothing" do
       anagramer.lookup('fred', words).should eq([]) 
     end
   end
@@ -34,7 +34,7 @@ describe Anagramer do
       @output = anagramer.lookup('PINKISH', words) 
     end
     
-    it "should return anagram" do
+    it "should return anagrams" do
       @output.should include('kinship') 
     end
 
