@@ -1,4 +1,4 @@
-require './lib/word_repository'
+require './bin/word_repository'
 
 describe WordRepository do
   context "when file exists" do

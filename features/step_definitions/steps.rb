@@ -1,14 +1,14 @@
-require './lib/anagramer.rb'
-
-Given /^I type in (.*?)$/ do |input|
-  @anagramer = Anagramer.new
-  @input = input 
-end
-
-When /^I ask for anagrams$/ do
-  @output = @anagramer.lookup @input 
+Given /^I ask for anagrams for (.*?)$/ do |input|
+  steps %{
+    When I run `list_anagrams.rb #{input} `
+  }
 end
 
 Then /^I should see (.*?)$/ do |expected|
-  @output.join(',').should eq(expected) 
+  steps %{
+    Then it should pass with:
+"""
+#{expected}
+"""
+  }
 end

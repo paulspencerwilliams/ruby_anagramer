@@ -1,7 +1,6 @@
 Feature: returns list of anagrams based on input
 Scenario Outline: returns all anagrams
-  Given I type in <input>
-  When I ask for anagrams
+  Given I ask for anagrams for <input>
   Then I should see <expected> 
 
   Examples: 

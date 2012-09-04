@@ -1,5 +1,6 @@
-require './lib/word_repository'
-
+#!/usr/bin/env ruby
+$LOAD_PATH << File.expand_path(File.dirname(__FILE__)) 
+require 'word_repository'
 class Anagramer
   def lookup(input, word_repository = WordRepository.new  ) 
     matches = []

@@ -1,4 +1,4 @@
-require './lib/anagramer'
+require './bin/anagramer'
 
 describe Anagramer do
   let (:words) { stub(:list => ['kinship', 'pinkish', 'fred'])}
